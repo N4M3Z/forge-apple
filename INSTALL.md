@@ -26,8 +26,7 @@ git clone https://github.com/N4M3Z/forge-apple.git
 | Component | Purpose |
 |-----------|---------|
 | `bin/safari-tabs.sh` | Safari tab capture (local + iCloud) |
-| `bin/music-playlists.sh` | Apple Music playlist creation and population |
-| `bin/music-playlists-fill.sh` | Fill missing tracks in existing playlists |
+| `bin/music-playlists.sh` | Apple Music playlist creation from JSON spec |
 | `skills/Demo/` | Interactive daily dashboard with OS write-back |
 | `skills/Safari/` | Safari tab operations |
 | `skills/Music/` | Apple Music playlist automation |
@@ -39,7 +38,8 @@ git clone https://github.com/N4M3Z/forge-apple.git
 | macOS | Yes | — | AppleScript, EventKit, Safari CloudTabs.db |
 | Homebrew | Recommended | [brew.sh](https://brew.sh/) | Package manager for dependencies below |
 | ekctl | Optional | See [ekctl repo](https://github.com/N4M3Z/ekctl) | Calendar + Reminders via EventKit CLI |
-| jq | Optional | `brew install jq` | URL encoding for Maps integration in Demo skill |
+| jq | Required (Music) | `brew install jq` | JSON parsing for Music playlists + URL encoding for Demo |
+| yq | Optional | `brew install yq` | General-purpose YAML processing |
 
 Without `ekctl`, the module still provides Safari tab capture and Apple Music automation. Calendar and Reminders features require `ekctl`.
 

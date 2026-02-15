@@ -24,8 +24,7 @@ forge-apple/
 ├── .claude-plugin/plugin.json    # Claude Code plugin registration
 ├── bin/
 │   ├── safari-tabs.sh            # Tab capture (local via AppleScript, iCloud via CloudTabs.db)
-│   ├── music-playlists.sh        # Create + populate Apple Music playlists
-│   └── music-playlists-fill.sh   # Fill missing tracks after adding albums
+│   └── music-playlists.sh        # Create + populate Apple Music playlists from JSON spec
 ├── hooks/
 │   └── hooks.json                # Empty — no active hooks
 ├── skills/
@@ -33,8 +32,7 @@ forge-apple/
 │   │   └── SKILL.md              # /Demo — interactive daily dashboard with OS write-back
 │   ├── Music/
 │   │   ├── SKILL.md              # /Music — Apple Music playlist automation
-│   │   ├── CreatePlaylists.md    # Operation: create + populate playlists
-│   │   └── FillMissing.md        # Operation: retry missing tracks
+│   │   └── CreatePlaylists.md    # Operation: create + populate playlists from JSON
 │   └── Safari/
 │       ├── SKILL.md              # /Safari — tab capture, Reading List, bookmarks
 │       └── CaptureTabs.md        # Operation: snapshot tabs to dated archive
@@ -51,7 +49,7 @@ forge-apple/
 | Skill | Purpose |
 |-------|---------|
 | `Demo` | Interactive daily dashboard — calendar, reminders, Safari tabs. Supports write-back: triage reminders, block focus time, create reminders, open routes in Maps. |
-| `Music` | Apple Music playlist automation — create, populate, and fill missing tracks via AppleScript. |
+| `Music` | Apple Music playlist automation — create and populate playlists from a JSON spec via AppleScript. |
 | `Safari` | Tab capture, Reading List, and bookmark operations (macOS). |
 
 ### Safari tab capture
@@ -68,15 +66,15 @@ bash bin/safari-tabs.sh --count    # summary counts only
 
 ### Apple Music playlists
 
-Creates and populates Apple Music playlists via AppleScript. Tracks are matched by searching the Apple Music library — albums must be added to the library first.
+Creates and populates Apple Music playlists from a JSON spec via AppleScript. The AI prepares the spec (from scene descriptions, mood requests, or manual track lists), the script executes it. Tracks are matched by searching the Apple Music library — albums must be added to the library first.
 
 ```bash
-bash bin/music-playlists.sh        # idempotent: delete + create + populate
-bash bin/music-playlists-fill.sh   # retry previously missing tracks
+bash bin/music-playlists.sh playlists.json   # idempotent: delete + create + populate
 ```
 
 - Music.app must be running
-- Playlist folder structure must exist in Music.app
+- Playlist folder must exist in Music.app
+- Requires `jq` for JSON parsing (`brew install jq`)
 
 ## Calendar and Reminders
 

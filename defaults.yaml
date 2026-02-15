@@ -24,3 +24,8 @@ safari_tabs: true
 # Override in config.yaml for locale-specific filters (e.g. sync artifacts).
 event_filters:
   - "Cancelled"
+
+# Apple Music playlist automation.
+# jq required for JSON parsing (brew install jq).
+music:
+  folder: ""       # target folder playlist in Music.app (empty = top level, folder must exist)
