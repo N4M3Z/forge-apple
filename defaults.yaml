@@ -1,0 +1,26 @@
+# forge-apple default configuration.
+# Override: create config.yaml (gitignored) with only the fields you want to change.
+
+# ekctl calendar aliases to query for daily context.
+# Each alias must match an ekctl calendar name (see: ekctl list calendars).
+calendars:
+  - personal
+  - work
+  - family
+
+# ekctl reminder list aliases.
+# Default list is used for quick-add. Others are queried for the glance.
+reminders:
+  default: tasks
+  lists:
+    - tasks
+    - work
+    - shopping
+
+# Show Safari tab count in glance (requires Safari running for local tabs).
+safari_tabs: true
+
+# Event title prefixes to filter out of calendar queries.
+# Override in config.yaml for locale-specific filters (e.g. sync artifacts).
+event_filters:
+  - "Cancelled"
