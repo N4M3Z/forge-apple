@@ -40,6 +40,8 @@ git clone https://github.com/N4M3Z/forge-apple.git
 | ekctl | Optional | See [ekctl repo](https://github.com/N4M3Z/ekctl) | Calendar + Reminders via EventKit CLI |
 | jq | Required (Music) | `brew install jq` | JSON parsing for Music playlists + URL encoding for Demo |
 | yq | Optional | `brew install yq` | General-purpose YAML processing |
+| [safety-net](https://github.com/kenryu42/claude-code-safety-net) | Recommended | See [root INSTALL.md](../../INSTALL.md#recommended-security-tools) | Blocks destructive commands |
+| shellcheck | Recommended | `brew install shellcheck` | Shell script linting |
 
 Without `ekctl`, the module still provides Safari tab capture and Apple Music automation. Calendar and Reminders features require `ekctl`.
 
