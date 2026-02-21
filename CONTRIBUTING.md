@@ -2,7 +2,7 @@
 
 ## Module structure
 
-forge-apple follows the [Module Standard](../../Core/docs/Architecture.md#module-standard). The source of truth for skills is `skills/` in this module — the `.opencode/skills/` copies are deployed by forge-core and should not be edited directly.
+forge-apple follows the [Module Standard](../../ARCHITECTURE.md#module-standard). The source of truth for skills is `skills/` in this module — the `.opencode/skills/` copies are deployed by forge-core and should not be edited directly.
 
 ## Code style
 
