@@ -1,5 +1,6 @@
 ---
 name: Safari
+version: 0.1.0
 description: Safari automation — tab capture, Reading List, and bookmark operations (macOS). USE WHEN safari, capture tabs, snapshot tabs, save tabs, archive tabs, reading list, bookmarks.
 user_invocable: true
 ---

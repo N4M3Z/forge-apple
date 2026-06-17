@@ -1,5 +1,6 @@
 ---
 name: Demo
+version: 0.1.0
 description: Today at a Glance — calendar events, open reminders, Safari tab count. USE WHEN today, schedule, calendar, reminders, what's on, daily overview, glance, my day, demo.
 user_invocable: true
 ---
