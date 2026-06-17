@@ -1,5 +1,6 @@
 ---
 name: Music
+version: 0.1.0
 description: Apple Music playlist automation via AppleScript (macOS). USE WHEN apple music, playlist, playlists, music automation, create playlist, scene soundtrack.
 user_invocable: true
 ---
