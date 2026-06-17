@@ -6,3 +6,6 @@ config.yaml
 
 # Claude Code
 .claude/
+
+# Legacy forge-lib submodule (removed; ignore any leftover checkout)
+lib/
